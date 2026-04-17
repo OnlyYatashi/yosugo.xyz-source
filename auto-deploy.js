@@ -29,7 +29,7 @@ function pushChanges() {
             
             console.log('[Auto-Deploy] Commit created');
             
-            exec(`git push origin main`, { cwd: repoPath }, (error, stdout, stderr) => {
+            exec(`git push origin master`, { cwd: repoPath }, (error, stdout, stderr) => {
                 if (error) {
                     console.error('[Auto-Deploy] Error pushing:', error.message);
                     return;
