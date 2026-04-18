@@ -5,8 +5,6 @@ const path = require('path');
 const repoPath = process.cwd();
 const gitRemote = 'https://github.com/OnlyYatashi/yosugo.xyz-source.git';
 
-const filesToWatch = ['index.html', 'script.js', 'style.css'];
-
 console.log('Watching for file changes...');
 
 let debounceTimer;
@@ -40,15 +38,29 @@ function pushChanges() {
     });
 }
 
-filesToWatch.forEach(file => {
-    fs.watch(file, (eventType, filename) => {
+const publicFiles = ['index.html', 'script.js', 'style.css'];
+
+publicFiles.forEach(file => {
+    if (fs.existsSync(file)) {
+        fs.watch(file, (eventType, filename) => {
+            if (eventType === 'change') {
+                console.log(`[Watch] ${filename} changed`);
+                clearTimeout(debounceTimer);
+                debounceTimer = setTimeout(pushChanges, 2000);
+            }
+        });
+    }
+});
+
+if (fs.existsSync('data')) {
+    fs.watch('data', { recursive: true }, (eventType, filename) => {
         if (eventType === 'change') {
-            console.log(`[Watch] ${filename} changed`);
+            console.log(`[Watch] data/${filename} changed`);
             clearTimeout(debounceTimer);
             debounceTimer = setTimeout(pushChanges, 2000);
         }
     });
-});
+}
 
 process.on('SIGINT', () => {
     console.log('\nStopping file watcher...');
