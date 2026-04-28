@@ -1,0 +1,229 @@
+:root {
+    --bg-color: #0a0a0a;
+    --card-bg: #151515;
+    --accent-primary: #bc13fe;
+    --accent-secondary: #00d4ff;
+    --text-main: #ffffff;
+    --text-muted: #a0a0a0;
+    --nav-height: 70px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+nav {
+    height: var(--nav-height);
+    background: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(188, 19, 254, 0.2);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    background: linear-gradient(45deg, var(--accent-primary), var(--accent-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 500;
+    transition: 0.3s;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.nav-links a:hover {
+    color: var(--accent-primary);
+    text-shadow: 0 0 10px var(--accent-primary);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(circle at center, rgba(188, 19, 254, 0.1) 0%, transparent 70%);
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    background: linear-gradient(to bottom, #fff, #888);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background: var(--accent-primary);
+    color: white;
+    box-shadow: 0 0 15px rgba(188, 19, 254, 0.5);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px rgba(188, 19, 254, 0.8);
+}
+
+/* Product Sections */
+.container {
+    padding: 100px 5%;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    text-align: center;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--accent-secondary);
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: 0.4s;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    border-color: var(--accent-secondary);
+    transform: translateY(-10px);
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--accent-secondary);
+    margin-bottom: 20px;
+    display: block;
+}
+
+/* About Page Specific */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 150px auto;
+    text-align: center;
+}
+
+.pfp {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid var(--accent-primary);
+    margin-bottom: 20px;
+    object-fit: cover;
+    box-shadow: 0 0 20px var(--accent-primary);
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+    padding: 50px 5%;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .nav-links {
+        display: none;
+    }
+}
