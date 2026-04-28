@@ -35,11 +35,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const cards = document.querySelectorAll('.card');
     cards.forEach(card => {
         card.addEventListener('mouseenter', () => {
-            card.style.boxShadow = '0 0 20px rgba(0, 212, 255, 0.2)';
+            card.style.boxShadow = '0 24px 42px rgba(14, 8, 5, 0.34)';
             card.style.cursor = 'pointer';
         });
         card.addEventListener('mouseleave', () => {
-            card.style.boxShadow = 'none';
+            card.style.boxShadow = '';
         });
 
         card.addEventListener('click', (e) => {
