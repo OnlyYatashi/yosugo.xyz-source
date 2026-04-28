@@ -205,7 +205,8 @@ nav {
     flex-direction: column;
     align-items: center;
     max-width: 800px;
-    margin: 150px auto;
+    margin: 100px auto 50px auto; /* Increased top margin to clear fixed nav */
+    padding-top: 20px;
     text-align: center;
 }
 
@@ -217,6 +218,8 @@ nav {
     margin-bottom: 20px;
     object-fit: cover;
     box-shadow: 0 0 20px var(--accent-primary);
+    position: relative;
+    z-index: 1; /* Ensure it stays behind nav but clear of background */
 }
 
 .about-text h2 {
