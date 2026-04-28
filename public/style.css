@@ -71,6 +71,25 @@ nav {
     text-shadow: 0 0 10px var(--accent-primary);
 }
 
+.status-tag {
+    font-size: 0.7rem;
+    color: var(--accent-secondary);
+    vertical-align: middle;
+    margin-left: 5px;
+    text-transform: none;
+    opacity: 0.8;
+}
+
+/* Page Transitions */
+.fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 /* Hero Section */
 .hero {
     height: 100vh;
