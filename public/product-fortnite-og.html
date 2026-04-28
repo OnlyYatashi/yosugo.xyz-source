@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortnite OG Account | Elite Resells</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="fade-in">
+    <nav>
+        <div class="logo">Elite Resells</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cheats.html">Cheats<span class="status-tag">(In Progress)</span></a></li>
+            <li><a href="accounts.html">Accounts<span class="status-tag">(In Progress)</span></a></li>
+            <li><a href="steam.html">Steam<span class="status-tag">(In Progress)</span></a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="product-page-container">
+        <div class="product-header">
+            <div class="product-info">
+                <span class="product-tag">OG</span>
+                <span class="product-tag">Skins</span>
+                <h1>Fortnite OG Account</h1>
+                <p style="color: var(--text-muted);">Premium OG accounts with rare Season 1 & 2 content.</p>
+            </div>
+            <div class="status-tag" style="font-size: 1.2rem;">(Coming Soon)</div>
+        </div>
+
+        <h3>Account Highlights</h3>
+        <div class="feature-list">
+            <div class="feature-item"><strong>Renegade Raider</strong> - Available on high-tier selections.</div>
+            <div class="feature-item"><strong>Black Knight</strong> - Full Season 2 Battle Pass completed.</div>
+            <div class="feature-item"><strong>Original Email (OGE)</strong> - Complete control and security for your purchase.</div>
+            <div class="feature-item"><strong>Rare Emotes</strong> - Floss, Take the L, and other legacy emotes.</div>
+            <div class="feature-item"><strong>Secure Transfer</strong> - Guided process to ensure 0% pull-back risk.</div>
+        </div>
+
+        <div class="purchase-box">
+            <h2>Select Account Tier</h2>
+            <div class="option-selector">
+                <button class="option-btn active" data-price="20.00">Standard OG</button>
+                <button class="option-btn" data-price="45.00">Rare Skins</button>
+                <button class="option-btn" data-price="75.00">Super Rare</button>
+                <button class="option-btn" data-price="100.00">Ultra OG</button>
+            </div>
+            <div id="displayPrice" style="font-size: 2.5rem; color: var(--accent-secondary); font-weight: bold; margin: 20px 0;">$20.00</div>
+            <button class="btn btn-primary" style="width: 100%; padding: 15px; font-size: 1.2rem;">Purchase Account</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Elite Resells. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.option-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                document.getElementById('displayPrice').innerText = '$' + btn.dataset.price;
+            });
+        });
+    </script>
+</body>
+</html>
