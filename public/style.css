@@ -5,7 +5,7 @@
     --accent-secondary: #00d4ff;
     --text-main: #ffffff;
     --text-muted: #a0a0a0;
-    --nav-height: 70px;
+    --nav-height: 50px; /* Reduced height for a sleeker look */
 }
 
 * {
@@ -20,13 +20,14 @@ body {
     color: var(--text-main);
     line-height: 1.6;
     overflow-x: hidden;
+    padding-top: var(--nav-height); /* Ensure content doesn't start under nav */
 }
 
 /* Navigation */
 nav {
     height: var(--nav-height);
-    background: rgba(10, 10, 10, 0.8);
-    backdrop-filter: blur(10px);
+    background: rgba(10, 10, 10, 0.9);
+    backdrop-filter: blur(15px);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,7 +40,7 @@ nav {
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 1.2rem; /* Slightly smaller logo */
     font-weight: 800;
     background: linear-gradient(45deg, var(--accent-primary), var(--accent-secondary));
     -webkit-background-clip: text;
