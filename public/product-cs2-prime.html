@@ -18,15 +18,15 @@
         </ul>
     </nav>
 
-    <div class="product-page-container">
+    <main class="product-page-container">
         <div class="product-header">
             <div class="product-info">
                 <span class="product-tag">Prime</span>
                 <span class="product-tag">Matchmaking</span>
                 <h1>CS2 Prime Account</h1>
-                <p style="color: var(--text-muted);">Prime-enabled Counter-Strike accounts ready for ranked play.</p>
+                <p class="product-subtitle">Prime-enabled Counter-Strike accounts ready for ranked play.</p>
             </div>
-            <div class="status-tag" style="font-size: 1.2rem;">(Coming Soon)</div>
+            <div class="status-tag product-status">(Coming Soon)</div>
         </div>
 
         <h3>Account Highlights</h3>
@@ -65,23 +65,15 @@
                 <button class="option-btn" data-price="14.00">Medal Prime</button>
                 <button class="option-btn" data-price="18.00">High Trust Prime</button>
             </div>
-            <div id="displayPrice" style="font-size: 2.5rem; color: var(--accent-secondary); font-weight: bold; margin: 20px 0;">$10.00</div>
-            <button class="btn btn-primary" style="width: 100%; padding: 15px; font-size: 1.2rem;">Purchase Account</button>
+            <div id="displayPrice" class="display-price">$10.00</div>
+            <button class="btn btn-primary product-cta">Purchase Account</button>
         </div>
-    </div>
+    </main>
 
     <footer>
         <p>&copy; 2026 Elite Resells. All rights reserved.</p>
     </footer>
 
-    <script>
-        document.querySelectorAll('.option-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                document.getElementById('displayPrice').innerText = '$' + btn.dataset.price;
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

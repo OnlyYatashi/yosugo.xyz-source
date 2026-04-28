@@ -18,15 +18,15 @@
         </ul>
     </nav>
 
-    <div class="product-page-container">
+    <main class="product-page-container">
         <div class="product-header">
             <div class="product-info">
                 <span class="product-tag">Premier</span>
                 <span class="product-tag">Prime</span>
                 <h1>CS2 Premier Ready</h1>
-                <p style="color: var(--text-muted);">Competitive-ready Prime accounts with Premier unlocked and ready to queue.</p>
+                <p class="product-subtitle">Competitive-ready Prime accounts with Premier unlocked and ready to queue.</p>
             </div>
-            <div class="status-tag" style="font-size: 1.2rem;">(Coming Soon)</div>
+            <div class="status-tag product-status">(Coming Soon)</div>
         </div>
 
         <h3>Account Highlights</h3>
@@ -65,23 +65,15 @@
                 <button class="option-btn" data-price="24.00">10K Rating</button>
                 <button class="option-btn" data-price="32.00">15K Rating</button>
             </div>
-            <div id="displayPrice" style="font-size: 2.5rem; color: var(--accent-secondary); font-weight: bold; margin: 20px 0;">$18.00</div>
-            <button class="btn btn-primary" style="width: 100%; padding: 15px; font-size: 1.2rem;">Purchase Account</button>
+            <div id="displayPrice" class="display-price">$18.00</div>
+            <button class="btn btn-primary product-cta">Purchase Account</button>
         </div>
-    </div>
+    </main>
 
     <footer>
         <p>&copy; 2026 Elite Resells. All rights reserved.</p>
     </footer>
 
-    <script>
-        document.querySelectorAll('.option-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                document.getElementById('displayPrice').innerText = '$' + btn.dataset.price;
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

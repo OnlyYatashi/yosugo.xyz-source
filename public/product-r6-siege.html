@@ -18,14 +18,14 @@
         </ul>
     </nav>
 
-    <div class="product-page-container">
+    <main class="product-page-container">
         <div class="product-header">
             <div class="product-info">
                 <span class="product-tag tag-legit">Legit</span>
                 <h1>R6 Siege External</h1>
-                <p style="color: var(--text-muted);">Elite tactical advantage for Rainbow Six Siege.</p>
+                <p class="product-subtitle">Elite tactical advantage for Rainbow Six Siege.</p>
             </div>
-            <div class="status-tag" style="font-size: 1.2rem;">(Coming Soon)</div>
+            <div class="status-tag product-status">(Coming Soon)</div>
         </div>
 
         <h3>Cheat Features</h3>
@@ -44,23 +44,15 @@
                 <button class="option-btn" data-price="12.00">1 Month</button>
                 <button class="option-btn" data-price="30.00">3 Months</button>
             </div>
-            <div id="displayPrice" style="font-size: 2.5rem; color: var(--accent-secondary); font-weight: bold; margin: 20px 0;">$1.00</div>
-            <button class="btn btn-primary" style="width: 100%; padding: 15px; font-size: 1.2rem;">Add to Cart</button>
+            <div id="displayPrice" class="display-price">$1.00</div>
+            <button class="btn btn-primary product-cta">Add to Cart</button>
         </div>
-    </div>
+    </main>
 
     <footer>
         <p>&copy; 2026 Elite Resells. All rights reserved.</p>
     </footer>
 
-    <script>
-        document.querySelectorAll('.option-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                document.getElementById('displayPrice').innerText = '$' + btn.dataset.price;
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

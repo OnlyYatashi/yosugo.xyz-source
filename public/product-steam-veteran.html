@@ -18,15 +18,15 @@
         </ul>
     </nav>
 
-    <div class="product-page-container">
+    <main class="product-page-container">
         <div class="product-header">
             <div class="product-info">
                 <span class="product-tag tag-steam">Veteran</span>
                 <span class="product-tag">OG</span>
                 <h1>Veteran Steam Accounts</h1>
-                <p style="color: var(--text-muted);">High-trust, aged accounts with legacy medals and clean history.</p>
+                <p class="product-subtitle">High-trust, aged accounts with legacy medals and clean history.</p>
             </div>
-            <div class="status-tag" style="font-size: 1.2rem;">(Coming Soon)</div>
+            <div class="status-tag product-status">(Coming Soon)</div>
         </div>
 
         <h3>Account Features</h3>
@@ -66,23 +66,15 @@
                 <button class="option-btn" data-price="8.50">20 Years</button>
                 <button class="option-btn" data-price="10.00">23 Years</button>
             </div>
-            <div id="displayPrice" style="font-size: 2.5rem; color: var(--accent-secondary); font-weight: bold; margin: 20px 0;">$5.00</div>
-            <button class="btn btn-primary" style="width: 100%; padding: 15px; font-size: 1.2rem;">Get Your Account</button>
+            <div id="displayPrice" class="display-price">$5.00</div>
+            <button class="btn btn-primary product-cta">Get Your Account</button>
         </div>
-    </div>
+    </main>
 
     <footer>
         <p>&copy; 2026 Elite Resells. All rights reserved.</p>
     </footer>
 
-    <script>
-        document.querySelectorAll('.option-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                document.getElementById('displayPrice').innerText = '$' + btn.dataset.price;
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
