@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS2 Prime Account | Elite Resells</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="fade-in">
+    <nav>
+        <div class="logo">Elite Resells</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cheats.html">Cheats<span class="status-tag">(In Progress)</span></a></li>
+            <li><a href="accounts.html">Accounts<span class="status-tag">(In Progress)</span></a></li>
+            <li><a href="steam.html">Steam<span class="status-tag">(In Progress)</span></a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="product-page-container">
+        <div class="product-header">
+            <div class="product-info">
+                <span class="product-tag">Prime</span>
+                <span class="product-tag">Matchmaking</span>
+                <h1>CS2 Prime Account</h1>
+                <p style="color: var(--text-muted);">Prime-enabled Counter-Strike accounts ready for ranked play.</p>
+            </div>
+            <div class="status-tag" style="font-size: 1.2rem;">(Coming Soon)</div>
+        </div>
+
+        <h3>Account Highlights</h3>
+        <div class="feature-list">
+            <div class="feature-item"><strong>Prime Enabled</strong> - Jump straight into Prime matchmaking without the unlock grind.</div>
+            <div class="feature-item"><strong>Clean History</strong> - No VAC or game bans on supplied stock.</div>
+            <div class="feature-item"><strong>Phone Ready</strong> - Set up for fast verification and secure transfer.</div>
+            <div class="feature-item"><strong>Trusted Profiles</strong> - Aged inventory-ready accounts for safer long-term use.</div>
+            <div class="feature-item"><strong>Instant Access</strong> - Credentials delivered with full ownership instructions.</div>
+        </div>
+
+        <div class="purchase-box">
+            <div class="notice-stack">
+                <div class="notice-box">
+                    <h4>Account Configuration & Inventory Disclosure</h4>
+                    <p>
+                        Service medals, trust characteristics, inventory contents, matchmaking history, and ancillary Counter-Strike progression may vary between available accounts in this category. Unless a specification is explicitly described as guaranteed, such secondary attributes should be regarded as variable at fulfillment.
+                    </p>
+                    <p>
+                        Elite Resells guarantees the stated Prime-ready condition and the tier distinctions expressly enumerated within the product listing.
+                    </p>
+                </div>
+                <div class="notice-box">
+                    <h4>Credential Delivery & Regional Compliance Notice</h4>
+                    <p>
+                        The purchaser will receive the account credentials, current password, and linked email-login details required to assume complete control of the account upon transfer.
+                    </p>
+                    <p>
+                        If you intend to purchase skins, games, or marketplace items on the account, you should immediately rotate both the Steam credentials and linked email credentials, and verify that the account country is set correctly before engaging in any checkout activity.
+                    </p>
+                </div>
+            </div>
+            <h2>Select Account Tier</h2>
+            <div class="option-selector">
+                <button class="option-btn active" data-price="10.00">Standard Prime</button>
+                <button class="option-btn" data-price="14.00">Medal Prime</button>
+                <button class="option-btn" data-price="18.00">High Trust Prime</button>
+            </div>
+            <div id="displayPrice" style="font-size: 2.5rem; color: var(--accent-secondary); font-weight: bold; margin: 20px 0;">$10.00</div>
+            <button class="btn btn-primary" style="width: 100%; padding: 15px; font-size: 1.2rem;">Purchase Account</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Elite Resells. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.option-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                document.getElementById('displayPrice').innerText = '$' + btn.dataset.price;
+            });
+        });
+    </script>
+</body>
+</html>

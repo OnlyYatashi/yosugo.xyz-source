@@ -43,8 +43,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         card.addEventListener('click', (e) => {
-            // Don't open modal if clicking the Buy button specifically (though it's inside the card)
-            if (e.target.classList.contains('btn')) return;
+            // Dedicated product cards should navigate directly instead of opening the modal.
+            if (card.closest('.card-link')) return;
+
+            // Don't open modal if clicking the CTA inside the card.
+            if (e.target.closest('.btn')) return;
 
             const title = card.querySelector('h3').innerText;
             const description = card.dataset.description || card.querySelector('p').innerText;

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS2 Premier Ready | Elite Resells</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="fade-in">
+    <nav>
+        <div class="logo">Elite Resells</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cheats.html">Cheats<span class="status-tag">(In Progress)</span></a></li>
+            <li><a href="accounts.html">Accounts<span class="status-tag">(In Progress)</span></a></li>
+            <li><a href="steam.html">Steam<span class="status-tag">(In Progress)</span></a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="product-page-container">
+        <div class="product-header">
+            <div class="product-info">
+                <span class="product-tag">Premier</span>
+                <span class="product-tag">Prime</span>
+                <h1>CS2 Premier Ready</h1>
+                <p style="color: var(--text-muted);">Competitive-ready Prime accounts with Premier unlocked and ready to queue.</p>
+            </div>
+            <div class="status-tag" style="font-size: 1.2rem;">(Coming Soon)</div>
+        </div>
+
+        <h3>Account Highlights</h3>
+        <div class="feature-list">
+            <div class="feature-item"><strong>Premier Unlocked</strong> - Skip setup and enter CS2's main ranked ladder immediately.</div>
+            <div class="feature-item"><strong>Prime Matchmaking</strong> - Secure access to trusted queues from day one.</div>
+            <div class="feature-item"><strong>Established Profiles</strong> - Better-looking accounts for resale or personal long-term use.</div>
+            <div class="feature-item"><strong>Flexible Rating Options</strong> - Choose stock ready accounts or higher-rated inventory.</div>
+            <div class="feature-item"><strong>Full Access</strong> - Delivery includes login credentials and transfer guidance.</div>
+        </div>
+
+        <div class="purchase-box">
+            <div class="notice-stack">
+                <div class="notice-box">
+                    <h4>Account Configuration & Rating Disclosure</h4>
+                    <p>
+                        Premier rating, medal history, inventory composition, trust factors, and supplemental account progression may vary between stocked units unless a given element is expressly guaranteed in the selected tier description.
+                    </p>
+                    <p>
+                        The contractual scope of this offering is limited to the verified Prime and Premier-ready characteristics stated within the listing, with incidental extras remaining non-guaranteed.
+                    </p>
+                </div>
+                <div class="notice-box">
+                    <h4>Credential Delivery & Regional Compliance Notice</h4>
+                    <p>
+                        Each fulfilled order includes the account username, password, and the linked email-login credentials so the buyer receives immediate transfer-ready control of the account and mailbox.
+                    </p>
+                    <p>
+                        If you intend to transact on the account after delivery, you should replace both the account password and email credentials at once, and ensure that the account country and billing region are properly configured before initiating any purchase.
+                    </p>
+                </div>
+            </div>
+            <h2>Select Account Tier</h2>
+            <div class="option-selector">
+                <button class="option-btn active" data-price="18.00">Entry Premier</button>
+                <button class="option-btn" data-price="24.00">10K Rating</button>
+                <button class="option-btn" data-price="32.00">15K Rating</button>
+            </div>
+            <div id="displayPrice" style="font-size: 2.5rem; color: var(--accent-secondary); font-weight: bold; margin: 20px 0;">$18.00</div>
+            <button class="btn btn-primary" style="width: 100%; padding: 15px; font-size: 1.2rem;">Purchase Account</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Elite Resells. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.option-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                document.getElementById('displayPrice').innerText = '$' + btn.dataset.price;
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rust Internal | Elite Resells</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="fade-in">
+    <nav>
+        <div class="logo">Elite Resells</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cheats.html">Cheats<span class="status-tag">(In Progress)</span></a></li>
+            <li><a href="accounts.html">Accounts<span class="status-tag">(In Progress)</span></a></li>
+            <li><a href="steam.html">Steam<span class="status-tag">(In Progress)</span></a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="product-page-container">
+        <div class="product-header">
+            <div class="product-info">
+                <span class="product-tag tag-rage">Semi-Rage</span>
+                <h1>Rust Internal</h1>
+                <p style="color: var(--text-muted);">Complete situational awareness in the world of Rust.</p>
+            </div>
+            <div class="status-tag" style="font-size: 1.2rem;">(Coming Soon)</div>
+        </div>
+
+        <h3>Cheat Features</h3>
+        <div class="feature-list">
+            <div class="feature-item"><strong>Debug Camera</strong> - Scout bases and players with a freecam.</div>
+            <div class="feature-item"><strong>Super Jump</strong> - Scale walls and reach high places easily.</div>
+            <div class="feature-item"><strong>Silent Melee</strong> - Farm and fight without the noise.</div>
+            <div class="feature-item"><strong>Advanced ESP</strong> - Track players, animals, and loot through any surface.</div>
+            <div class="feature-item"><strong>Spiderclimb</strong> - Walk up vertical surfaces like a spider.</div>
+        </div>
+
+        <div class="purchase-box">
+            <h2>Select Your Duration</h2>
+            <div class="option-selector">
+                <button class="option-btn active" data-price="2.50">1 Day</button>
+                <button class="option-btn" data-price="9.00">1 Week</button>
+                <button class="option-btn" data-price="22.00">1 Month</button>
+                <button class="option-btn" data-price="50.00">3 Months</button>
+            </div>
+            <div id="displayPrice" style="font-size: 2.5rem; color: var(--accent-secondary); font-weight: bold; margin: 20px 0;">$2.50</div>
+            <button class="btn btn-primary" style="width: 100%; padding: 15px; font-size: 1.2rem;">Add to Cart</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Elite Resells. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.option-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                document.getElementById('displayPrice').innerText = '$' + btn.dataset.price;
+            });
+        });
+    </script>
+</body>
+</html>

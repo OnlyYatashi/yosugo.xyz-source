@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS2 Multi-Hack | Elite Resells</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="fade-in">
+    <nav>
+        <div class="logo">Elite Resells</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cheats.html">Cheats<span class="status-tag">(In Progress)</span></a></li>
+            <li><a href="accounts.html">Accounts<span class="status-tag">(In Progress)</span></a></li>
+            <li><a href="steam.html">Steam<span class="status-tag">(In Progress)</span></a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="product-page-container">
+        <div class="product-header">
+            <div class="product-info">
+                <span class="product-tag tag-legit">Legit</span>
+                <h1>CS2 Multi-Hack</h1>
+                <p style="color: var(--text-muted);">Precision tools for the ultimate CS2 experience.</p>
+            </div>
+            <div class="status-tag" style="font-size: 1.2rem;">(Coming Soon)</div>
+        </div>
+
+        <h3>Cheat Features</h3>
+        <div class="feature-list">
+            <div class="feature-item"><strong>Legit Aimbot</strong> - Subtle assistance with customizable smoothing.</div>
+            <div class="feature-item"><strong>Skin Changer</strong> - Access every skin, knife, and glove in the game.</div>
+            <div class="feature-item"><strong>Radar Hack</strong> - 2D Radar showing all enemy positions.</div>
+            <div class="feature-item"><strong>Triggerbot</strong> - Perfect reaction time for holding angles.</div>
+            <div class="feature-item"><strong>Bhop</strong> - Automated movement for faster rotations.</div>
+        </div>
+
+        <div class="purchase-box">
+            <h2>Select Your Duration</h2>
+            <div class="option-selector">
+                <button class="option-btn active" data-price="1.00">1 Day</button>
+                <button class="option-btn" data-price="5.00">1 Week</button>
+                <button class="option-btn" data-price="12.00">1 Month</button>
+                <button class="option-btn" data-price="30.00">3 Months</button>
+            </div>
+            <div id="displayPrice" style="font-size: 2.5rem; color: var(--accent-secondary); font-weight: bold; margin: 20px 0;">$1.00</div>
+            <button class="btn btn-primary" style="width: 100%; padding: 15px; font-size: 1.2rem;">Add to Cart</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Elite Resells. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.option-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                document.getElementById('displayPrice').innerText = '$' + btn.dataset.price;
+            });
+        });
+    </script>
+</body>
+</html>

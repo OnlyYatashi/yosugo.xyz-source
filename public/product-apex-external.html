@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex External | Elite Resells</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="fade-in">
+    <nav>
+        <div class="logo">Elite Resells</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cheats.html">Cheats<span class="status-tag">(In Progress)</span></a></li>
+            <li><a href="accounts.html">Accounts<span class="status-tag">(In Progress)</span></a></li>
+            <li><a href="steam.html">Steam<span class="status-tag">(In Progress)</span></a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="product-page-container">
+        <div class="product-header">
+            <div class="product-info">
+                <span class="product-tag tag-legit">Legit</span>
+                <h1>Apex External</h1>
+                <p style="color: var(--text-muted);">External security with elite performance.</p>
+            </div>
+            <div class="status-tag" style="font-size: 1.2rem;">(Coming Soon)</div>
+        </div>
+
+        <h3>Cheat Features</h3>
+        <div class="feature-list">
+            <div class="feature-item"><strong>No Recoil</strong> - Completely eliminate weapon kick.</div>
+            <div class="feature-item"><strong>Glow ESP</strong> - Highlight players through walls with high-quality glow.</div>
+            <div class="feature-item"><strong>Items ESP</strong> - Locate the best loot instantly.</div>
+            <div class="feature-item"><strong>EAC Bypass</strong> - Custom external bypass for maximum security.</div>
+        </div>
+
+        <div class="purchase-box">
+            <h2>Select Your Duration</h2>
+            <div class="option-selector">
+                <button class="option-btn active" data-price="1.50">1 Day</button>
+                <button class="option-btn" data-price="6.00">1 Week</button>
+                <button class="option-btn" data-price="15.00">1 Month</button>
+                <button class="option-btn" data-price="35.00">3 Months</button>
+            </div>
+            <div id="displayPrice" style="font-size: 2.5rem; color: var(--accent-secondary); font-weight: bold; margin: 20px 0;">$1.50</div>
+            <button class="btn btn-primary" style="width: 100%; padding: 15px; font-size: 1.2rem;">Add to Cart</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Elite Resells. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.option-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                document.getElementById('displayPrice').innerText = '$' + btn.dataset.price;
+            });
+        });
+    </script>
+</body>
+</html>
