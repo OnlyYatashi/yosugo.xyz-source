@@ -281,6 +281,18 @@ nav {
     transform: translateY(-10px);
 }
 
+.card-info-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    margin-bottom: 30px;
+}
+
+.card-info-link:hover h3 {
+    text-decoration: underline;
+    color: var(--accent-white);
+}
+
 .product-tag {
     display: inline-block;
     background: rgba(255,255,255,0.1);
