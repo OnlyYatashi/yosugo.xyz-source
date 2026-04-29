@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Yosugo Resells</title>
+    <meta property="og:title" content="Checkout | Yosugo Resells">
+    <meta property="og:description" content="Secure your purchase with Yosugo Resells. Fast, reliable, and professional.">
+    <meta property="og:image" content="embed.png">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .checkout-container {
+            max-width: 600px;
+            margin: 100px auto;
+            text-align: center;
+            padding: 60px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+            backdrop-filter: blur(20px);
+        }
+        .checkout-methods {
+            margin-top: 40px;
+            display: grid;
+            gap: 20px;
+        }
+        .method-card {
+            display: block;
+            padding: 30px;
+            background: #fff;
+            color: #000;
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            font-weight: 900;
+            text-transform: uppercase;
+            font-family: 'Space Mono', monospace;
+            transition: 0.4s;
+            font-size: 1.2rem;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+        }
+        .method-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 40px rgba(255, 255, 255, 0.4);
+            background: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="fade-in">
+    <canvas id="tunnel-bg"></canvas>
+    <nav>
+        <div class="logo">Yosugo Resells</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cheats.html">Cheats</a></li>
+            <li><a href="accounts.html">Accounts</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <main class="page-shell">
+        <div class="checkout-container">
+            <p class="eyebrow">Final Step</p>
+            <h1>Complete Purchase</h1>
+            <p>Select your preferred payment method below to finalize your order.</p>
+            
+            <div class="checkout-methods">
+                <a href="https://ko-fi.com/srtttttt" target="_blank" class="method-card">
+                    Ko-fi Checkout
+                </a>
+            </div>
+            
+            <p style="margin-top: 30px; font-size: 0.9rem; color: #555;">
+                Instant delivery upon payment confirmation.
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Yosugo Resells. All rights reserved.</p>
+    </footer>
+
+    <script src="tunnel.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
