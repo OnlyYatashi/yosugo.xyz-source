@@ -690,10 +690,25 @@ footer {
     .grid {
         grid-template-columns: 1fr;
     }
-    .nav-links {
+    nav {
+        width: 90%;
+        padding: 15px 20px;
+        height: auto;
         flex-direction: column;
-        gap: 1rem;
-        align-items: center;
+        gap: 15px;
+        top: 10px;
+    }
+    .nav-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+        width: 100%;
+    }
+    .nav-links a {
+        font-size: 0.75rem;
+        padding: 8px 14px;
+        white-space: nowrap;
     }
     .hero-layout {
         flex-direction: column;
@@ -704,6 +719,7 @@ footer {
     .page-shell,
     .product-page-container {
         padding: 1rem;
+        margin-top: 140px;
     }
     .purchase-box {
         padding: 1.5rem;
@@ -741,5 +757,23 @@ footer {
     }
     .option-btn {
         width: 100%;
+    }
+    nav {
+        padding: 12px 15px;
+        gap: 10px;
+    }
+    .nav-links {
+        gap: 5px;
+    }
+    .nav-links a {
+        font-size: 0.7rem;
+        padding: 6px 10px;
+    }
+    .logo {
+        font-size: 1.1rem;
+    }
+    .page-shell,
+    .product-page-container {
+        margin-top: 150px;
     }
 }
