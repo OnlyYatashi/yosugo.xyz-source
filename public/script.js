@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('Elite Resells - Website Loaded');
+    console.log('Yosugo Resells - Website Loaded');
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', event => {
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <h2 id="modalTitle">Product Details</h2>
                         <div id="modalTags" style="margin-top: 12px;"></div>
                         <p id="modalDescription" style="margin-top: 18px; color: var(--text-muted);"></p>
-                        <div id="modalPrice" style="margin-top: 22px; font-size: 1.4rem; color: var(--accent-primary-strong); font-weight: 800;"></div>
+                        <div id="modalPrice" style="margin-top: 22px; font-size: 1.4rem; color: #8b0000; font-weight: 800; font-family: 'Cinzel', serif;"></div>
                         <button class="btn btn-primary product-cta" style="margin-top: 22px;">Contact to Buy</button>
                     </div>
                 </div>

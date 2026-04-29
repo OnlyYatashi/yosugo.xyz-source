@@ -11,5 +11,5 @@ app.use(express.static(path.join(__dirname, 'public')));
 // For this multi-page site, we'll just let express.static handle it.
 
 app.listen(PORT, () => {
-    console.log(`Elite Resells running at http://localhost:${PORT}`);
+    console.log(`Yosugo Resells running at http://localhost:${PORT}`);
 });
