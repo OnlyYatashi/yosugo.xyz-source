@@ -15,18 +15,29 @@
     <meta name="twitter:image" content="https://yosugo.xyz/embed.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
         .checkout-container {
             max-width: 600px;
-            margin: 100px auto;
+            margin: 80px auto;
             text-align: center;
-            padding: 60px;
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: var(--radius-lg);
+            padding: 50px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-xl);
             backdrop-filter: blur(20px);
+            position: relative;
+            overflow: hidden;
+        }
+        .checkout-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
         }
         .checkout-methods {
             margin-top: 40px;
@@ -36,33 +47,47 @@
         .method-card {
             display: block;
             padding: 30px;
-            background: #fff;
-            color: #000;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            color: white;
             text-decoration: none;
-            border-radius: var(--radius-md);
-            font-weight: 900;
+            border-radius: var(--radius-lg);
+            font-weight: 700;
             text-transform: uppercase;
-            font-family: 'Space Mono', monospace;
-            transition: 0.4s;
-            font-size: 1.2rem;
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+            font-family: 'Orbitron', sans-serif;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 1.1rem;
+            box-shadow: 0 4px 20px rgba(124, 58, 237, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        .method-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        .method-card:hover::before {
+            left: 100%;
         }
         .method-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 40px rgba(255, 255, 255, 0.4);
-            background: #000;
-            color: #fff;
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 8px 30px rgba(124, 58, 237, 0.5);
         }
     </style>
 </head>
 <body class="fade-in">
     <canvas id="tunnel-bg"></canvas>
     <nav>
-        <div class="logo">Yosugo Resells</div>
+        <div class="logo">YOSUGO</div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="cheats.html">Cheats</a></li>
-            <li><a href="accounts.html">Accounts</a></li>
+            <li><a href="cheats.html">Cheats<span class="status-tag">Live</span></a></li>
+            <li><a href="accounts.html">Accounts<span class="status-tag">Live</span></a></li>
+            <li><a href="steam.html">Steam<span class="status-tag">Live</span></a></li>
             <li><a href="about.html">About</a></li>
         </ul>
     </nav>
@@ -72,14 +97,14 @@
             <p class="eyebrow">Final Step</p>
             <h1>Complete Purchase</h1>
             <p>Select your preferred payment method below to finalize your order.</p>
-            
+
             <div class="checkout-methods">
                 <a href="https://ko-fi.com/srtttttt" target="_blank" class="method-card">
                     Ko-fi Checkout
                 </a>
             </div>
-            
-            <p style="margin-top: 30px; font-size: 0.9rem; color: #555;">
+
+            <p style="margin-top: 30px; font-size: 0.9rem; color: var(--text-muted);">
                 Instant delivery upon payment confirmation.
             </p>
         </div>
